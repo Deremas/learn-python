@@ -135,7 +135,7 @@ print(student_grades) # this will print the dictionary after using setdefault().
 
 # 12. del statement - removes a key-value pair from the dictionary using the del statement.
 print(student_grades) # this will print the current dictionary before deleting a key-value pair.
-del student_grades["Bob"] # this will remove the key "Bob" and its corresponding value from the dictionary using the del statement.
+# del student_grades["Bob"] # this will remove the key "Bob" and its corresponding value from the dictionary using the del statement.
 print(student_grades) # this will print the dictionary after deleting the key "Bob", which will no longer include "Bob" and its corresponding grade. The output will look like this:
 # {'Charlie': 78, 'David': 90, 'Eve': 88, 'Frank': 80, 'Alice': 85} # this is just an example, the actual output may vary depending on the state of the dictionary before using the del statement.
 
@@ -178,3 +178,15 @@ print(zipped_dict) # this will print the new dictionary created by zipping toget
 # 19. dict() with fromkeys() - creates a new dictionary with specified keys and a default value for all keys.
 keys = ["Alice", "Bob", "Charlie"]
 
+# Multiple keys and values for each dictionary
+# In this example, we have a list of dictionaries where each dictionary represents a student with multiple keys (name, house, interest) and their corresponding values. We can loop through this list of dictionaries to access and print the information for each student. For example:
+students = [
+    {"name": "Abebe", "house": "Gondar", "interest": "Football "},
+    {"name": "Kebede", "house": "Addis Ababa", "interest": "Basketball"},
+    {"name": "Mulu", "house": "Bahir Dar", "interest": "Volleyball"},
+    {"name": "Sisay", "house": "Gondar", "interest": "Tennis"},
+    {"name": "Alemu", "house": "Addis Ababa", "interest": "Swimming"}
+]
+
+for student in students:
+    print(student["name"], student["house"], student["interest"], sep=", ")
