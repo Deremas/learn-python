@@ -84,27 +84,29 @@ print(student["age"])   # Output: 20
 # A class is a blueprint for creating objects, which are instances of the class. Classes can have attributes (data) and methods (functions) that operate on the data. They allow you to model real-world entities and their behaviors in your code.
 # Creating a class in Python is done using the `class` keyword, followed by the class name (it starts with a capital letter by convention). Inside the class, you can define an `__init__` method, which is a special method that is called when an object is created. This method is used to initialize the attributes of the object.
 # Example of a class
-class Student:
-    ...
+# class Student:
+#     def __init__(self, name, house):
+#         self.name = name
+#         self.house = house
 
-def get_student_info():
-    # student = Student()
-    # student.name = input("Name: ")
-    # student.house = input("House: ")
-    # Other good syntax:
-    name = input("Name: ")
-    house = input("House: ")
-    student = Student(name, house)
-    return student
+# def get_student_info():
+#     # student = Student()
+#     # student.name = input("Name: ")
+#     # student.house = input("House: ")
+#     # Other good syntax:
+#     name = input("Name: ")
+#     house = input("House: ")
+#     student = Student(name, house)
+#     return student
 
-def main():
-    student = get_student_info()
-    # if student.name == "Padma":
-    #      student.house = "Ravenclaw"
-    print(f"{student.name} from {student.house}")
+# def main():
+#     student = get_student_info()
+#     # if student.name == "Padma":
+#     #      student.house = "Ravenclaw"
+#     print(f"{student.name} from {student.house}")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 
 # Class vs Object:
@@ -112,17 +114,17 @@ if __name__ == "__main__":
 # An object, on the other hand, is an instance of a class. It is a specific realization of the class with actual values for its attributes.
 # Instance mean here: When you create an object from a class, that object is called an instance of the class. Each instance can have its own unique values for the attributes defined in the class. For example, if you have a class called `Student`, you can create multiple instances of that class, each representing a different student with their own name and house.
 # Example of class vs object
-class Student:
-    def __init__(self, name, house):
-        self.name = name
-        self.house = house
-# Creating an instance of the Student class
-student1 = Student("Padma", "Gryffindor")
-student2 = Student("Harry", "Gryffindor")
-print(student1.name)  # Output: Padma
-print(student1.house)  # Output: Gryffindor
-print(student2.name)  # Output: Harry
-print(student2.house)  # Output: Gryffindor
+# class Student:
+#     def __init__(self, name, house):
+#         self.name = name
+#         self.house = house
+# # Creating an instance of the Student class
+# student1 = Student("Padma", "Gryffindor")
+# student2 = Student("Harry", "Gryffindor")
+# print(student1.name)  # Output: Padma
+# print(student1.house)  # Output: Gryffindor
+# print(student2.name)  # Output: Harry
+# print(student2.house)  # Output: Gryffindor
 
 # Methods
 # Methods are functions that are defined inside a class and operate on instances of that class. They can access and modify the attributes of the instance. Methods are used to define the behaviors of the objects created from the class.
@@ -132,26 +134,26 @@ print(student2.house)  # Output: Gryffindor
 # IF we don't use __init__ method and self parameter, we would have to manually set the attributes for each instance of the class, which can be cumbersome and error-prone. The `__init__` method provides a convenient way to initialize the attributes of an object when it is created, ensuring that each instance has the necessary data to function properly. for self parameter, it allows us to access the attributes and methods of the instance within the class, making it possible to define behaviors that operate on the instance's data.
 
 # Validating input in __init__ method:
-class Student:
-    def __init__(self, name, house):
-        if not name:
-            raise ValueError("Missing name")
-        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
-            raise ValueError("Invalid house")
-        self.name = name
-        self.house = house
-# Example of creating a student with valid input
-try:
-    student1 = Student("Padma", "Gryffindor")
-    print(student1.name)  # Output: Padma
-    print(student1.house)  # Output: Gryffindor
-except ValueError as e:
-    print(e)
-# Example of creating a student with invalid input
-try:
-    student2 = Student("", "Gryffindor")
-except ValueError as e:
-    print(e)  # Output: Missing name
+# class Student:
+#     def __init__(self, name, house):
+#         if not name:
+#             raise ValueError("Missing name")
+#         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+#             raise ValueError("Invalid house")
+#         self.name = name
+#         self.house = house
+# # Example of creating a student with valid input
+# try:
+#     student1 = Student("Padma", "Gryffindor")
+#     print(student1.name)  # Output: Padma
+#     print(student1.house)  # Output: Gryffindor
+# except ValueError as e:
+#     print(e)
+# # Example of creating a student with invalid input
+# try:
+#     student2 = Student("", "Gryffindor")
+# except ValueError as e:
+#     print(e)  # Output: Missing name
 
 # Purpose of self parameter:
 # The `self` parameter in Python class methods is a reference to the instance of the class that is being created or accessed. It allows you to access and modify the attributes and methods of the instance within the class. When you define a method in a class, you need to include `self` as the first parameter, even though you don't pass it when calling the method. This is because Python automatically passes the instance as the first argument to the method when it is called on an object.
@@ -161,18 +163,52 @@ except ValueError as e:
 
 # __str__ method:
 # The `__str__` method in a Python class is a special method that is called when you use the `str()` function on an instance of the class or when you print the instance. It is used to define a human-readable string representation of the object. By implementing the `__str__` method, you can control how the object is represented as a string, which can be useful for debugging and displaying information about the object in a user-friendly way. For example, if you have a `Student` class, you can implement the `__str__` method to return a string that includes the student's name and house, making it easier to understand the output when you print a `Student` object. Here's an example:
-class Student:
-    def __init__(self, name, house):
-        self.name = name
-        self.house = house
-    def __str__(self):
-        return f"{self.name} from {self.house}"
-def main():
-    student = Student("Padma", "Gryffindor")
-    print(student)  # Output: Padma from Gryffindor
+# class Student:
+#     def __init__(self, name, house):
+#         self.name = name
+#         self.house = house
 
-if __name__ == "__main__":
-    main()
+#     def __str__(self):
+#         return f"{self.name} from {self.house}"
+    
+#     @property
+#     def name(self):
+#         return self._name
+#     @name.setter
+#     def name(self, name):
+#         if not name:
+#             raise ValueError("Missing name")
+#         self._name = name
+
+#     @property
+#     def house(self):
+#         return self._house
+
+#     @house.setter
+#     def house(self, house):
+#         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+#             raise ValueError("Invalid house")
+#         self._house = house
+
+
+# def get_student_info():
+#     # student = Student()
+#     # student.name = input("Name: ")
+#     # student.house = input("House: ")
+#     # Other good syntax:
+#     name = input("Name: ")
+#     house = input("House: ")
+#     student = Student(name, house)
+#     return student
+
+
+# def main():
+#     student = get_student_info()
+#     student._house = "Number Four, Private Drive"
+#     print(student)  # Output: Padma from Gryffindor
+
+# if __name__ == "__main__":
+#     main()
 
 # What happens if you don't implement the __str__ method?
 # If you don't implement the `__str__` method in a Python class, when you try to print an instance of that class or convert it to a string using the `str()` function, you will get a default string representation of the object that includes the class name and the memory address of the instance. This default representation is not very informative and can be difficult to understand, especially when you have multiple instances of the same class. For example, if you have a `Student` class without a `__str__` method, printing an instance of the class would result in output like `<__main__.Student object at 0x7f8b8c2d9d0>`, which does not provide any useful information about the student's name or house. Implementing the `__str__` method allows you to provide a more meaningful and human-readable representation of the object, making it easier to understand the output when you print an instance of the class.
@@ -180,4 +216,167 @@ if __name__ == "__main__":
 # Properties:
 # Properties in Python are a way to manage the access and modification of an object's attributes. They allow you to define methods that are accessed like attributes, providing a way to add logic for getting, setting, and deleting attributes. This is useful for encapsulating the internal state of an object and controlling how attributes are accessed and modified. By using properties, you can ensure that certain conditions are met when getting or setting an attribute, and you can also provide a way to compute the value of an attribute on the fly. For example, you can use properties to validate input when setting an attribute or to compute a value based on other attributes when getting an attribute. This helps to maintain the integrity of the object's state and allows for more flexible and maintainable code. Here's an example of using properties in a `Student` class:
 # decorator @property is used to define a method as a property, allowing you to access it like an attribute. The setter method is defined using the @property_name.setter decorator, which allows you to set the value of the property while also performing validation or other logic.
-class Student:
+# class Student:
+
+
+# class methods:
+# Class methods are methods that are bound to the class and not the instance of the class. They can be called on the class itself, rather than on an instance of the class. Class methods are defined using the `@classmethod` decorator and take `cls` as the first parameter, which refers to the class itself. Class methods are often used for factory methods, which are methods that return an instance of the class, or for methods that operate on the class as a whole rather than on individual instances. For example, you might use a class method to create a `Student` object from a string of data, or to keep track of the number of `Student` instances that have been created.
+# Example of a class method:
+class Person:
+    population = 0
+
+    def __init__(self, name):
+        self.name = name
+        Person.population += 1
+
+    @classmethod
+    def get_population(cls):
+        return cls.population
+    
+person1 = Person("Alice")
+person2 = Person("Bob")
+print(Person.get_population())  # Output: 2
+
+# Inheritance
+# Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a new class (called a child or subclass) to inherit attributes and methods from an existing class (called a parent or superclass). This promotes code reusability and allows for the creation of more specific classes based on general ones. The child class can override or extend the functionality of the parent class, allowing for customization while still retaining the core features of the parent. Inheritance helps to create a hierarchical relationship between classes and can lead to more organized and maintainable code. For example, you might have a `Person` class as a parent class, and then create `Student` and `Teacher` classes that inherit from `Person`, allowing them to share common attributes like `name` and `age`, while also having their own unique attributes and methods.
+# Example of inheritance:
+class Wizard:
+    def __init__(self, name):
+        if not name:
+            raise ValueError("Missing name")
+        self.name = name
+
+class Student(Wizard):
+    def __init__(self, name, house):
+        super().__init__(name)
+        self.house = house
+
+class Doctor(Wizard):
+    def __init__(self, name, specialty):
+        super().__init__(name)
+        self.specialty = specialty
+
+wizard = Wizard("Gandalf")
+student = Student("Abebe", "Addis Ababa")
+doctor = Doctor("Dr. Smith", "Cardiology")
+
+print(wizard.name)  # Output: Gandalf
+print(student.name, student.house)  # Output: Abebe Addis Ababa
+print(f"{doctor.name} is a {doctor.specialty} specialist")  # Output: Dr. Smith is a Cardiology specialist
+
+# Exceptions
+# Python exception hierarchy:
+# The picture shows that Python errors are classes, and those classes inherit from one another.
+# A child exception is a more specific version of its parent exception.
+# For example, ZeroDivisionError is an ArithmeticError, and ArithmeticError is an Exception.
+#
+# BaseException
+# This is the root parent class for all built-in Python exceptions.
+# Almost every error class comes from BaseException.
+# You usually do not catch BaseException directly because it also includes system-level exits.
+#
+# BaseException
+# +-- KeyboardInterrupt
+# +-- Exception
+#
+# KeyboardInterrupt:
+# Parent class: BaseException
+# This happens when the user stops the program manually, often with Ctrl+C.
+# It is separate from Exception because stopping a program is not a normal program mistake.
+#
+# Exception:
+# Parent class: BaseException
+# This is the parent class for most normal program errors.
+# When you write `except Exception:`, you catch many common errors, but not KeyboardInterrupt.
+#
+# Exception
+# +-- ArithmeticError
+# |   +-- ZeroDivisionError
+# +-- AssertionError
+# +-- AttributeError
+# +-- EOFError
+# +-- ImportError
+# |   +-- ModuleNotFoundError
+# +-- LookupError
+# |   +-- KeyError
+# +-- NameError
+# +-- SyntaxError
+# |   +-- IndentationError
+# +-- ValueError
+#
+# ArithmeticError:
+# Parent class: Exception
+# This is the parent class for math-related errors.
+#
+# ZeroDivisionError:
+# Parent class: ArithmeticError
+# This happens when you divide by zero.
+# Example:
+# 10 / 0
+#
+# AssertionError:
+# Parent class: Exception
+# This happens when an `assert` statement fails.
+# Example:
+# assert 2 + 2 == 5
+#
+# AttributeError:
+# Parent class: Exception
+# This happens when an object does not have the attribute or method you tried to use.
+# Example:
+# student.color
+# If `student` has no `color` attribute, Python raises AttributeError.
+#
+# EOFError:
+# Parent class: Exception
+# This can happen when `input()` expects more input but reaches the end of the input stream.
+#
+# ImportError:
+# Parent class: Exception
+# This happens when Python cannot import something.
+#
+# ModuleNotFoundError:
+# Parent class: ImportError
+# This happens when the module itself cannot be found.
+# Example:
+# import some_module_that_does_not_exist
+#
+# LookupError:
+# Parent class: Exception
+# This is the parent class for lookup errors in collections.
+#
+# KeyError:
+# Parent class: LookupError
+# This happens when you try to access a dictionary key that does not exist.
+# Example:
+# student = {"name": "Harry"}
+# student["house"]
+#
+# NameError:
+# Parent class: Exception
+# This happens when you use a variable name that has not been defined.
+# Example:
+# print(username)
+#
+# SyntaxError:
+# Parent class: Exception
+# This happens when Python cannot understand your code structure.
+# Example:
+# if name == "Harry"
+# The line above is missing a colon.
+#
+# IndentationError:
+# Parent class: SyntaxError
+# This happens when code indentation is wrong.
+# It is a kind of SyntaxError because indentation is part of Python syntax.
+#
+# ValueError:
+# Parent class: Exception
+# This happens when the type is correct, but the value is not acceptable.
+# In our Student class, `house` is a string, so the type is okay.
+# But if the string is not one of the allowed houses, we raise ValueError.
+# Example:
+# Student("Harry", "addis")
+
+# Operator Overloading:
+# Operator overloading is a feature in object-oriented programming that allows you to define custom behavior for built-in operators (like +, -, *, etc.) when they are used with instances of your classes. This is done by implementing special methods in your class, such as `__add__` for the + operator, `__sub__` for the - operator, and so on. By overloading operators, you can make your classes more intuitive and easier to use, allowing you to perform operations on your objects in a way that makes sense for their data. For example, if you have a `Vector` class, you could overload the + operator to allow for vector addition, making it possible to add two `Vector` instances together using the + operator, which would return a new `Vector instance representing the sum of the two vectors.
