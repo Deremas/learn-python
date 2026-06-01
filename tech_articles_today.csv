@@ -1,0 +1,21 @@
+scrape_date,headline,author,created_at,article_link,source
+2026-05-29,"Show HN: Hm – a task runner with a Python DSL, growing into a CI/CD system",suis_siva,2026-05-27T16:41:36Z,https://github.com/harmont-dev/harmont-cli,Hacker News Algolia API
+2026-05-29,"Ask HN: Failing interviews for mid-level SWE in UK, advice please",mjb8086,2026-05-21T17:19:03Z,,Hacker News Algolia API
+2026-05-29,Show HN: I Made a Claude Skill for Spec-Driven Development (SDD),NTRIXLM,2026-05-21T12:49:07Z,https://github.com/FredAntB/Spec-Driven-Development,Hacker News Algolia API
+2026-05-29,"Show HN: Diom – Back end primitives (queue, rate limit, etc.) in one Rust binary",tasn,2026-05-20T16:17:28Z,https://github.com/svix/diom,Hacker News Algolia API
+2026-05-29,Show HN: Free guide to CPython internals for experienced Python developers,MarinhoD,2026-05-17T17:17:00Z,https://pynsights.vercel.app,Hacker News Algolia API
+2026-05-29,"Show HN: Incorporator, Turn any API/File into typed Python graph with pipeline",PyPlumber,2026-05-15T18:32:34Z,https://github.com/PyPlumber/Incorporator/,Hacker News Algolia API
+2026-05-29,"Show HN: Nanci, CI written in plain Python, locally debuggable",Hex08,2026-05-14T17:44:47Z,https://nanci.dev/,Hacker News Algolia API
+2026-05-29,Show HN: Diom – Open-source back end primitives with no runtime dependencies,tasn,2026-05-13T11:53:37Z,https://github.com/svix/diom,Hacker News Algolia API
+2026-05-29,Show HN: When the LLM Accidentally,lucid-dev,2026-05-08T05:39:39Z,,Hacker News Algolia API
+2026-05-29,"Show HN: Diom – Backend primitives (queue, rate limit, etc.) in one Rust binary",tasn,2026-05-03T12:38:21Z,https://github.com/svix/diom,Hacker News Algolia API
+2026-05-29,Show HN: I built a web builder after 6 years of trying,kira_aziz,2026-05-03T12:07:35Z,https://whale.kiraaziz.club,Hacker News Algolia API
+2026-05-29,Show HN: A marketplace for LLM-powered webapps earning on token margins,cryptoz,2026-05-02T20:54:11Z,https://codeplusequalsai.com/dashboard,Hacker News Algolia API
+2026-05-29,Show HN: Modeleon – Python DSL that compiles to live Excel formulas,adilkhanovkz,2026-05-01T10:08:21Z,https://github.com/modeleonai/modeleon,Hacker News Algolia API
+2026-05-29,Ask HN: In the age of AI do we need to learn how to code?,JasonHEIN,2026-05-01T04:23:37Z,,Hacker News Algolia API
+2026-05-29,"We scanned 100 Smithery MCP servers, 22 flagged, here's what we found",chaksaray,2026-04-30T23:44:18Z,,Hacker News Algolia API
+2026-05-29,"Show HN: Pcons: new software build tool in Python, inspired by SCons and CMake",darkstarsys,2026-04-29T02:28:12Z,https://github.com/DarkStarSystems/pcons,Hacker News Algolia API
+2026-05-29,Show HN: Ghostty Theme Mixer (preview themes and fonts live),mcval,2026-04-28T10:47:52Z,https://ghosttythemes.com/,Hacker News Algolia API
+2026-05-29,"Show HN: Llm.sql – Run a 640MB LLM on SQLite, with 210MB peak RSS and 7.4 tok/s",aldielshala,2026-04-24T11:28:35Z,,Hacker News Algolia API
+2026-05-29,Show HN: Voiden – API Workflows as Markdown Files (Obsidian × Curl),dhruv3006,2026-04-15T14:32:10Z,https://voiden.md/download,Hacker News Algolia API
+2026-05-29,NVIDIA LLM compression to save money,eln1,2026-04-14T19:19:04Z,https://developer.nvidia.com/blog/cut-checkpoint-costs-with-about-30-lines-of-python-and-nvidia-nvcomp/,Hacker News Algolia API

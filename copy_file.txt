@@ -1,0 +1,10 @@
+1. Abebe is a backend developer who builds APIs for mobile and web apps.
+2. The backend handles user authentication, database storage, and business logic.
+3. A good backend system should be secure, fast, and easy to maintain.
+4. REST APIs allow the frontend to communicate with the server.
+5. Databases store important information such as users, orders, and payments.
+6. Middleware can check permissions before allowing access to protected routes.
+7. Backend developers often work with Node.js, Laravel, Django, or ASP.NET Core.
+8. Error handling helps users understand what went wrong without exposing secrets.
+9. Logging is important for tracking bugs and monitoring server activity.
+10. A scalable backend can handle more users without crashing.
